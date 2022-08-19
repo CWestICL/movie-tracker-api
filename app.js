@@ -13,7 +13,8 @@ app.use("/shows",shows);
 app.use(express.urlencoded({extended:true}));
 
 app.get("/", (req,res)=> {
-    res.sendStatus(200);
+    console.log("GET request for app");
+    res.status(200).send("Movie Tracker API is online!");
 });
 
 async function main() {
